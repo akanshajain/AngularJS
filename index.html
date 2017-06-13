@@ -2,11 +2,26 @@
    <html>
        <head>
            <script src="angular/angular.js"></script>
-             
+           <script src="app/app.js"></script>     
        </head>
-       <body ng-app>
-    
-           {{2*2}}
-            
+       <body ng-app="MyApp" ng-controller="MyCtrl">
+        <h1 align="center">   {{name}}</h1>
+        
+           <ul>
+               <li ng-repeat="n in courses">{{n}} </li>   
+           </ul>  
+
+           <table border="2">
+               <tr>
+                   <th>FNAME</th>
+                   <th>LNAME</th>
+                   <th>SALARY</th>
+               </tr>
+               <tr ng-repeat="d in data">
+                   <td>{{d.fname}}</td>
+                   <td>{{d.lname}}</td>
+                   <td>{{d.salary}}</td>
+               </tr>
+           </table> 
        </body>      
-   </html>   
+   </html>     
